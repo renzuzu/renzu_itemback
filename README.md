@@ -2,7 +2,7 @@
 - Show any item to your Character
 - Multiple Weapons are included in default config, and some custom items example.
 - DEPENDENCY : OX INVENTORY
-
+- FRAMEWORK ESX ONLY!
 
 ![image](https://user-images.githubusercontent.com/82306584/192984062-9d57d413-0d32-4bbc-ab5a-3e17c584cebd.png)
 ![image](https://user-images.githubusercontent.com/82306584/192984202-bdcc96bd-f764-4d7b-a8ea-9444cc8bc354.png)
