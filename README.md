@@ -8,6 +8,7 @@
 ![image](https://user-images.githubusercontent.com/82306584/192984202-bdcc96bd-f764-4d7b-a8ea-9444cc8bc354.png)
 ![image](https://user-images.githubusercontent.com/82306584/192984478-f248d17d-7f96-4d4f-af65-a6cba585ee9c.png)
 
-- if you want to edit the position of object
+
 # here is the tool
+- if you want to edit the position of object
 - https://forum.cfx.re/t/devtool-attach-object-to-ped-with-preview/4758930
