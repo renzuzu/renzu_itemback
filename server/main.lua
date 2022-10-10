@@ -8,6 +8,13 @@ RegisterServerEvent("esx_multicharacter:relog")
 AddEventHandler('esx_multicharacter:relog', function()
 	local source = source
 	for src,v in pairs(props) do
+		if v.components then
+			for k,v in pairs(v.components) do
+				if DoesEntityExist(NetworkGetEntityFromNetworkId(v)) then
+					DeleteEntity(NetworkGetEntityFromNetworkId(v))
+				end
+			end
+		end
 		for k,v in pairs(v) do
 			--print(k,v,v.net,DoesEntityExist(NetworkGetEntityFromNetworkId(v.net)))
 			if src == source and DoesEntityExist(NetworkGetEntityFromNetworkId(v.net)) then
@@ -25,6 +32,13 @@ AddEventHandler("playerDropped",function()
 	local source = source
 	local new = false
 	for src,v in pairs(props) do
+		if v.components then
+			for k,v in pairs(v.components) do
+				if DoesEntityExist(NetworkGetEntityFromNetworkId(v)) then
+					DeleteEntity(NetworkGetEntityFromNetworkId(v))
+				end
+			end
+		end
 		for k,v in pairs(v) do
 			if src == source and DoesEntityExist(NetworkGetEntityFromNetworkId(v.net)) then
 				local ent = Entity(NetworkGetEntityFromNetworkId(v.net)).state

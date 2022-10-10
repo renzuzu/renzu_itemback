@@ -1,13 +1,15 @@
-shared_script '@secwrap/init.lua' fx_version 'cerulean'
+shared_script '@secwrap/init.lua' 
+fx_version "adamant"
 
-game 'gta5'
-ui_page {
-    'html/index.html',
-}
+games { 'gta5'}
+lua54 'yes'
+use_experimental_fxv2_oal 'yes'
 
+shared_script '@ox_lib/init.lua'
 client_scripts {
 	'config.lua',
-	'client/main.lua'
+	'components.lua',
+	'client/main.lua',
 }
 
 server_scripts {
@@ -16,6 +18,7 @@ server_scripts {
 }
 
 files {
+	'components.json',
 	'html/index.html',
 	'html/script.js',
 	'html/style.css',
