@@ -3,8 +3,10 @@ local currentWeapon = nil
 viewer = false
 local loaded = false
 local compodata = {}
-local items = exports.ox_inventory:Items()
+local items = {}
 Citizen.CreateThread(function()
+	Wait(1)
+	items = exports.ox_inventory:Items()
 	ESX = exports['es_extended']:getSharedObject()
 	ESX.PlayerData = ESX.GetPlayerData()
 	PlayerData = ESX.PlayerData
@@ -45,7 +47,6 @@ AddEventHandler('esx:playerLoaded', function(playerData)
 		end
 	end
 	onback = {}
-	print("Playerloaded")
 	Wait(5000)
 	active = true
 	loaded = true
