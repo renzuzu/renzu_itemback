@@ -135,7 +135,7 @@ function StartThread() -- temporary logic, to be reworked to non looped, later i
 					local hascompo, components = GetWeaponComponents(itemname)
 					if string.find(itemname:upper(), "WEAPON_") and hascompo then
 						for k,v in pairs(components) do
-							if compodata[v.name].item == k then
+							if compodata[v.name].item == k and IsModelInCdimage(v.model) then
 								local bone = GetEntityBoneIndexByName(ent, v.bone)
 								lib.requestModel(v.model)
 								local componentEntity = CreateObjectNoOffset(v.model,GetEntityCoords(cache.ped)-vec3(0.0,0.0,5.0), true, true)
@@ -176,8 +176,7 @@ StartThread()
 lastweapon = nil
 
 DeleteAttachments = function(data)
-	print(data,data.components)
-	if data.components then
+	if data and data.components then
 		for k,v in pairs(data.components) do
 			print(NetworkGetEntityFromNetworkId(v),v)
 			if DoesEntityExist(NetworkGetEntityFromNetworkId(v)) then
