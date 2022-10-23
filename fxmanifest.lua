@@ -1,4 +1,4 @@
-shared_script '@secwrap/init.lua' 
+shared_script '@renzu_shield/init.lua' 
 fx_version "adamant"
 
 games { 'gta5'}
